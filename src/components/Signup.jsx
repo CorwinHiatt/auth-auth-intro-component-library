@@ -1,7 +1,7 @@
 import { Button, Form, Input, Layout} from "antd"
 
 
-export default function Signup({setUser}){
+export default function Signup({ setUser }){
     const handleFormSubmit = (values) => {
         console.log('success', values)
         fetch ('http://localhost:3030/users', {

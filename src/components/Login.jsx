@@ -12,7 +12,7 @@ export default function Login({setUser, setToken}){
         .then(response => response.json())
         .then( data => {
           setToken(data.token) 
-          setUser(data.setUser)
+          setUser(data.user)
         })
         .catch(alert)
     }

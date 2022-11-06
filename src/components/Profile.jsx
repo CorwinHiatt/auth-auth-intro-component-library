@@ -2,10 +2,10 @@ import {Button, Form, Input, Layout} from 'antd'
 
 
 
-export default function Profile({users, token, setUser}){
+export default function Profile({user, token, setUser}){
     const handleProfileUpdate = (values) => {
 
-        fetch(`http://localhost:3030/users/${users.uid}`, {
+        fetch(`http://localhost:3030/users/${user.uid}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',
@@ -22,7 +22,7 @@ export default function Profile({users, token, setUser}){
             <h1>Profile</h1>
             <Form 
             onFinish={handleProfileUpdate}
-            initialValues={users}
+            initialValues={user}
             labelCol={{span: 8}} 
             wrapperCol={{ span:16 }}>
 
