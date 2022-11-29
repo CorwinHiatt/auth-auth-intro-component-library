@@ -17,9 +17,9 @@ export default function Login({setUser, setToken}){
         .catch(alert)
     }
     return(
-    <Layout.Content style={{padding: '50px' } }>
+    <Layout.Content style={{padding: '100px' } }>
         <h1>Login</h1>
-        <Form onFinish={handleFormSubmit} labelCol={{span: 8}} wrapperCol={{span:16}}>
+        <Form onFinish={handleFormSubmit} labelCol={{span:16}} wrapperCol={{span:3}}>
         <Form.Item label='Email' name='email' rules={[{
             required: true,
             message:'Please Enter Valid Email'
